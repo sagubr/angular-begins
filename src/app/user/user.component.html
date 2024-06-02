@@ -1,0 +1,9 @@
+<div class="content" (click)="onSelectUser(user)" [id]="hash" [class.active]="true">
+    <!--caso a propriedade seja nulo, é utilizado o coalesce para valor alternativo-->
+    <div>
+        <strong>id:</strong> {{user?.id ?? 'props undefined'}}
+    </div>
+    <div>
+        <strong>name:</strong> {{user?.name ?? 'props undefined'}}
+    </div>
+</div>

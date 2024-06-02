@@ -1,0 +1,15 @@
+$primary-color: #10403b;
+$secondary-color: #127369;
+
+.tasks {
+  padding: 20px;
+  margin: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: $primary-color;
+  font-size: 1.2em;
+
+  &:hover {
+    background-color: $secondary-color;
+  }
+}

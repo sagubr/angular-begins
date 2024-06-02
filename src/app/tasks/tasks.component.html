@@ -1,0 +1,16 @@
+<div class="tasks">
+   <!--ng-container é utilizado para manipulação de estruturas condicionais, mas não é renderizado no DOM-->
+   <ng-container *ngIf="(tasks?.length ?? -1) > 0; else fallback">
+      <h2>Tasks</h2>
+      <div *ngFor="let task of tasks">
+         <app-task [task]="task"></app-task>
+         <hr>
+      </div>
+   </ng-container>
+   <!--ng-template é utilizado para renderizar algum conteúdo programaticamente-->
+   <ng-template #fallback>
+      <div>
+         <h2>No tasks found</h2>
+      </div>
+   </ng-template>
+</div>
